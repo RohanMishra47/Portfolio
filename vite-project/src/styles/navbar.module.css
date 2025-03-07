@@ -1,0 +1,22 @@
+.navbar {
+    position: absolute; /* Absolute positioning */
+    top: 10px; /* Position at the top */
+    left: 10px; /* Position at the left */
+    display: flex;
+    background-color: #333; /* Dark background */
+    padding: 10px 20px; /* Adds some spacing */
+    width: fit-content; /* Background only covers links */
+    border-radius: 8px; /* Optional: Rounded corners */
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px; /* Spacing between links */
+    font-size: 18px;
+  }
+  
+  .navbar a:hover {
+    text-decoration: underline;
+  }
+  

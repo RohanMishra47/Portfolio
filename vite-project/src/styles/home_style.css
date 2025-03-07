@@ -1,0 +1,157 @@
+.home-style {
+    font-family: Montserrat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      text-align: center;
+  }
+  
+  /* .home-style p {
+      font-size: 24px;
+      white-space: nowrap;
+      border-right: 2px solid black;
+      overflow: hidden;
+      width: 0;
+      animation: typing 3s steps(40, end) forwards, blink 0.6s infinite;
+  } */
+  
+  /* @keyframes typing {
+      from {width: 0;}
+      to {width: 100%;}
+  }
+  
+  @keyframes blink {
+      50% {border-color: transparent;}
+  } */
+  
+  .heading {
+      position: relative;
+      display: inline-block;
+      padding: 10px 20px;
+      margin-bottom: 10px;
+      font-size: 24px;
+      font-weight: bold;
+      border: 2px solid transparent; /* Prevent layout shift */
+    }
+    
+    /* Bottom border */
+    .heading::before {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      /*background: red; /* Border color */
+      box-shadow: 0 0 10px red;
+      bottom: 0;
+      left: 0;
+      animation: draw-bottom 1s forwards infinite;
+    }
+    
+    /* Right border */
+    .heading::after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 0%;
+      box-shadow: 0 0 10px red;
+      top: 0;
+      right: 0;
+      animation: draw-right 1s forwards 1s infinite;
+    }
+    
+    /* Top border */
+    .heading .top-border {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      box-shadow: 0 0 10px red;
+      top: 0;
+      right: 0;
+      animation: draw-top 1s forwards 2s infinite;
+    }
+    
+    /* Left border */
+    .heading .left-border {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 0%;
+      box-shadow: 0 0 10px red;
+      bottom: 0;
+      left: 0;
+      animation: draw-left 1s forwards 3s infinite;
+    }
+    
+    /* Animations */
+    @keyframes draw-bottom {
+      from { width: 0%; }
+      to { width: 100%; }
+    }
+    
+    @keyframes draw-right {
+      from { height: 0%; }
+      to { height: 100%; }
+    }
+    
+    @keyframes draw-top {
+      from { width: 0%; }
+      to { width: 100%; }
+    }
+    
+    @keyframes draw-left {
+      from { height: 0%; }
+      to { height: 100%; }
+    }
+  
+    .sub-heading {
+      margin-top: 10px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    
+    .para-glow {
+      position: relative;
+      display: inline-flex;
+      padding: 2px 4px;
+      overflow: hidden;
+    }
+    
+    .para-glow::before {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 100%;
+      background: yellow; /* Highlight color */
+      left: 0;
+      top: 0;
+      z-index: 1;
+      transition: width 1s ease-in-out, opacity 0.5s ease-in-out;
+      mix-blend-mode: multiply;
+    }
+    
+    /* Animation for spans 1 & 2: Expand fully */
+    .para-glow.animate::before {
+      width: 100%;
+    }
+    
+    /* Special rule for the LAST span: It disappears after completing */
+    .para-glow:last-of-type.animate::before {
+      animation: fadeOut 1s forwards 2s; /* Delay fade-out after full expansion */
+    }
+    
+    /* Fade-out animation */
+    @keyframes fadeOut {
+      0% {
+        width: 100%;
+        opacity: 1;
+      }
+      100% {
+        width: 100%;
+        opacity: 0;
+      }
+    }
+    
+    
